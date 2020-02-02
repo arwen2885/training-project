@@ -1,6 +1,5 @@
 
 public class Rectangle {
-    //разделить перемнные по отдельным координатам x и y
     private int upperLeftX1;
     private int upperRightX2;
     private int lowerLeftX3;
@@ -12,7 +11,6 @@ public class Rectangle {
     private int longer;
     private int width;
 
-// вычислить остальны поля класса во всех конструкторах
     Rectangle(int upperLeftX1, int upperLeftY1, int lowerRightX4, int lowerRightY4) {
         this.upperLeftX1 = upperLeftX1;
         this.upperLeftY1 = upperLeftY1;
@@ -51,7 +49,6 @@ public class Rectangle {
         longer=1;
         width=1;
     }
-
 
     public int getUpperLeftX1() {
         return upperLeftX1;
@@ -132,7 +129,7 @@ public class Rectangle {
     public void setWidth(int width) {
         this.width = width;
     }
-    // переименовать методы в более развёрнутый вид
+
     public void printCoordinatesCorner(){
     System.out.println(getUpperLeftX1());
     System.out.println(getUpperLeftY1());
@@ -165,8 +162,7 @@ public class Rectangle {
     public int  areaRectangle(){
         return width * longer;
     }
-// переименовать переменные в более понятный вид (pointX)
-    // переписать на основе крайних точек
+
     public String doteWrittenBy( int pointX, int pointY ){
         int beforeX = lowerLeftX3;
         int beforeY = lowerLeftY3;
@@ -180,9 +176,8 @@ public class Rectangle {
                 return "вписана";
             }
         }
-
     }
-// доработать
+
      public String doteWrittenBy2(Point2D point2D){
         int x = point2D.getX();
         int y = point2D.getY();
@@ -199,7 +194,6 @@ public class Rectangle {
             }
         }
      }
-
 
      public void newRectangle(int n){
         setWidth(width*n);
@@ -228,6 +222,4 @@ public class Rectangle {
          Point2D point2D = new Point2D(4,5);
          System.out.println (rectangle.doteWrittenBy2(point2D));
      }
-
-
 }
