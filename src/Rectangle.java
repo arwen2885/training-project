@@ -200,6 +200,14 @@ public class Rectangle {
         setLonger(longer*n);
      }
 
+     public String  crossRectangles (int x1m, int y1m, int x2m, int y2m,int x3m, int y3m, int x4m, int y4m ){
+        if (y1m<upperLeftY1 && x1m>lowerLeftX3 && x1m<lowerRightX4 && y1m>lowerLeftY3)
+            return "прямоугольник вписан";
+        else {
+            return "прямоугольник не вписан";
+        }
+     }
+
      public boolean equals(Object o){
         if (this==o) return true;
         if (o==null || getClass() != o.getClass()) return false;
@@ -221,5 +229,7 @@ public class Rectangle {
 
          Point2D point2D = new Point2D(4,5);
          System.out.println (rectangle.doteWrittenBy2(point2D));
+         Rectangle rectanglMini= new Rectangle();
+         System.out.println(rectanglMini. crossRectangles(3,10,12,10, 3,3,10, 3 ));
      }
 }
