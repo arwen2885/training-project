@@ -152,11 +152,13 @@ public class Rectangle {
      setLowerRightY4(lowerRightY4 + dy);
     }
 
-    public void changeSideRectangle(int nx, int ny){
-        setLonger(longer/ny);
-        setWidth(width/nx);
-        setLowerLeftX3(lowerLeftX3);
-        setLowerLeftY3(lowerLeftY3);
+    public void changeSideRectangle(int n){
+        setLonger(longer/n);
+        setWidth(width/n);
+        upperLeftY1= lowerLeftY3 + width;
+        lowerRightX4= lowerLeftX3 + longer;
+        upperRightX2= lowerRightX4;
+        upperRightY2= upperLeftY1;
     }
 
     public int  areaRectangle(){
@@ -223,13 +225,13 @@ public class Rectangle {
         Rectangle rectangle=new Rectangle();
         rectangle.printCoordinatesCorner();
         rectangle.changeCoordinatesCorner(10, 8);
-        rectangle.changeSideRectangle(3, 5);
+        rectangle.changeSideRectangle(3);
         rectangle.printCoordinatesCorner();
         System.out.println (rectangle.doteWrittenBy(7,8));
 
          Point2D point2D = new Point2D(4,5);
          System.out.println (rectangle.doteWrittenBy2(point2D));
-         Rectangle rectanglMini= new Rectangle();
-         System.out.println(rectanglMini. crossRectangles(3,10,12,10, 3,3,10, 3 ));
+         Rectangle rectangleMini= new Rectangle();
+         System.out.println(rectangleMini. crossRectangles(3,10,12,10, 3,3,10, 3 ));
      }
 }
